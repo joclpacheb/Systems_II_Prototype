@@ -197,7 +197,7 @@
                 </div>
                 <div class="topbar-divider d-none d-sm-block"></div>
                 <span class="float-right" style="opacity:0">|</span>
-                <a class="btn btn-success text-black">Agregar Actividad</a>
+                <a class="btn btn-success text-black" data-toggle="modal" data-target="#ActividadModal">Agregar Actividad</a>
 
 
                 <!-- Topbar Navbar -->
@@ -260,7 +260,7 @@
                             <div class="card-body">
                                 <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
                                 <span class="float-right" style="opacity:0">|</span>
-                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <a href="#" id="hola" class="float-right" data-original-title="Agregar Tarea"  data-toggle="tooltip" onclick="myFunction()"><i class="fa fa-plus-circle text-success" ></i></a>
                                 <h6 class="card-title text-uppercase text-truncate py-2">Interfaz de usuario</h6>
                                 <div class="items border border-light">
                                     <div class="card draggable shadow-sm" id="cd1" draggable="true" ondragstart="drag(event)">
@@ -316,9 +316,9 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
                         <div class="card bg-light">
                             <div class="card-body">
-                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip" ><i class="fa fa-info-circle e text-success" ></i></a>
                                 <span class="float-right" style="opacity:0">|</span>
-                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip" onclick="myFunction()"><i class="fa fa-plus-circle text-success" ></i></a>
                                 <h6 class="card-title text-uppercase text-truncate py-2">En progreso</h6>
                                 <div class="items border border-light">
                                     <div class="card draggable shadow-sm" id="cd4" draggable="true" ondragstart="drag(event)">
@@ -374,9 +374,9 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
                         <div class="card bg-light">
                             <div class="card-body">
-                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip" ><i class="fa fa-info-circle e text-success" ></i></a>
                                 <span class="float-right" style="opacity:0">|</span>
-                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" onclick="myFunction()"></i></a>
                                 <h6 class="card-title text-uppercase text-truncate py-2">Revision</h6>
                                 <div class="items border border-light">
                                     <div class="card draggable shadow-sm" id="cd9" draggable="true" ondragstart="drag(event)">
@@ -414,7 +414,7 @@
                             <div class="card-body">
                                 <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
                                 <span class="float-right" style="opacity:0">|</span>
-                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip" ><i class="fa fa-plus-circle text-success" onclick="myFunction()"></i></a>
                                 <h6 class="card-title text-uppercase text-truncate py-2">Completo</h6>
                                 <div class="items border border-light">
                                     <div class="card draggable shadow-sm" id="cd11" draggable="true" ondragstart="drag(event)">
@@ -517,6 +517,129 @@
         </div>
     </div>
 </div>
+<!--Actividad modal-->
+<div class="modal fade" id="ActividadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-black" id="ActividadModalLabel">Agregar Actividad</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="servicio" autocomplete="off" class="form" method="post" role="form">
+                    <input class="form-control" type=hidden >
+                    <div class="form-group row">
+                        <label for="nombre"
+                               class="col-sm-3 control-label"><b>Nombre:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><b>N</b></span>
+                                </div>
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre"  required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-date-input" class="col-sm-3 control-label"><b>Fecha:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <div class="input-group-append">
+                                                        <span class="input-group-text"><i
+                                                                class="fas fa-calendar"></i></span>
+                                </div>
+                                <input class="form-control" type="date" id="example-date-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion" class="col-sm-3 control-label"><b>Descripción:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <textarea id="descripcion" class="form-control" rows="3" placeholder="Descripción ..." style="margin-top: 0px; margin-bottom: 0px; height: 95px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success text-center" hidden>Error Message</div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-success" href="#"><i class="fa fas-"></i>Agregar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Tarea modal-->
+<div class="modal fade" id="tareaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-black" id="tareaModalLabel">Agregar Tarea</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="tarea" autocomplete="off" class="form" method="post" role="form">
+                    <input class="form-control" type=hidden >
+                    <div class="form-group row">
+                        <label for="nombre"
+                               class="col-sm-3 control-label"><b>Nombre:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><b>N</b></span>
+                                </div>
+                                <input type="text" class="form-control" id="nombre1" placeholder="Nombre"  required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-date-input" class="col-sm-3 control-label"><b>Fecha:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <div class="input-group-append">
+                                                        <span class="input-group-text"><i
+                                                                class="fas fa-calendar"></i></span>
+                                </div>
+                                <input class="form-control" type="date" id="example-date-input1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion" class="col-sm-3 control-label"><b>Descripción:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <textarea id="descripcion1" class="form-control" rows="3" placeholder="Descripción ..." style="margin-top: 0px; margin-bottom: 0px; height: 95px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success text-center" hidden>Error Message</div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-success" href="#"><i class="fa fas-"></i>Agregar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+
+    function myFunction() {
+        $('#tareaModal').modal('show');
+    }
+</script>
 
 
 
