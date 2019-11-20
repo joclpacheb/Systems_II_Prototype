@@ -1,553 +1,554 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sistemas 2</title>
-
-    <!-- Favicon
-    <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">-->
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Icons -->
-    <link href="assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-    <link href="assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link href="assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page-->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-<!-- Page Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-isasystems sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon ">
-                <i class="fas fa-city"></i>
-                <!--<i class="fas fa-laugh-wink"></i>-->
-            </div>
-            <div class="sidebar-brand-text mx-3">Isa system</div>
-        </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading
-        <div class="sidebar-heading">
-            tablas
-        </div>-->
-
-        <!-- Nav Item - tables Collapse Listas
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="true" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Listados</span>
-            </a>
-            <div id="collapsePages" class="collapse " aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Solicitudes:</h6>
-                    <a class="collapse-item" href="tableRequest.html">
-                        <i class="fas fa-folder-open"></i>
-                        <span>Solicitudes</span>
-                    </a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Servicios:</h6>
-                    <a class="collapse-item " href="tableService.html">
-                        <i class="fas fa-syringe"></i>
-                        <span>Servicios</span>
-                    </a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Beneficiarios:</h6>
-                    <a class="collapse-item" href="tableBeneficiario.html">
-                        <i class="fas fa-users"></i>
-                        <span>Beneficiarios</span>
-                    </a>
-                </div>
-            </div>
-        </li>-->
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            registrar
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Bulma templates</title>
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/jgthms/bulma/master/docs/favicons/favicon-32x32.png" type="image/x-icon">
+    <meta name="description" content="Free bulma templates">
+    <!-- Bulma Version 0.8.x -->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  <body>
+    <section class="hero is-info is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+          Free Bulma Templates
+          </h1>
+          <h2 class="subtitle">
+          Based on the <a href="http://bulma.io">Bulma</a> CSS Framework
+          </h2>
+          <a class="github-button" href="https://github.com/BulmaTemplates/bulma-templates" data-size="large" aria-label="View BulmaTemplates/bulma-templates on GitHub">View on Github</a>
+          <a class="github-button" href="https://github.com/BulmaTemplates/bulma-templates" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star BulmaTemplates/bulma-templates on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/BulmaTemplates/bulma-templates/fork" data-size="large" data-show-count="true" aria-label="Fork BulmaTemplates/bulma-templates on GitHub">Fork</a>
         </div>
-
-        <!-- Nav Item - forms Collapse Formularios -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseList"
-               aria-expanded="true" aria-controls="collapseList">
-                <i class="fas fa-clipboard-list"></i>
-                <span>Formularios</span>
-            </a>
-            <div id="collapseList" class="collapse show" aria-labelledby="headingList" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Empleado:</h6>
-                    <a class="collapse-item" href="formEmployee.html">
-                        <i class="fas fa-file-signature"></i>
-                        <span>Registrar Empleado</span>
-                    </a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Aspirante:</h6>
-                    <a class="collapse-item" href="formAspirante.html">
-                        <i class="fas fa-file-signature"></i>
-                        <span>Registrar Aspirante</span>
-                    </a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Proyecto:</h6>
-                    <a class="collapse-item" href="formProyecto.html">
-                        <i class="fas fa-file-signature"></i>
-                        <span>Registrar Proyecto</span>
-                    </a>
-                </div>
+      </div>
+      </div>
+    </section>
+    <br>
+    <div class="container content-wrapper">
+      <div class="columns is-multiline">
+        <!-- admin -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Admin <small>(Light)</small></span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/admin.html"><img src="images/admin.png" alt="Admin template screenshot"></a>
+              </figure>
             </div>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Comprimir Sidebar-->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            <footer class="card-footer">
+              <a href="templates/admin.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/admin.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
         </div>
-
-    </ul>
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main Content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                <!-- Sidebar Toggle (Topbar) -->
-                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
-
-                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                    <li class="nav-item dropdown no-arrow d-sm-none">
-                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                             aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search for..." aria-label="Search"
-                                           aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-                    <div class="topbar-divider d-none d-sm-block"></div>
-
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
-                            <!--<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">-->
-                        </a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                             aria-labelledby="userDropdown">
-                            <!--<div class="dropdown-divider"></div>-->
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </li>
-
-                </ul>
-
-            </nav>
-            <!-- End of Topbar -->
-
-            <!-- Begin Page Content -->
-
-            <div class="container-fluid">
-                <!-- Breadcrumbs-->
-                <ol class="breadcrumb">
-
-                    <li class="breadcrumb-item active">
-                        Menu Inicial
-                    </li>
-                    <!-- <li ></li>-->
-                </ol>
-
-                <!-- Icon Cards-->
-                <!--TODO:  CAMBIAR NOMBRE-->
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-sm-6 mb-3">
-                        <div class="card text-white bg-isasystem o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-child icon-2x"></i>
-                                </div>
-                                <div class="mr-5">Empleados</div>
-                            </div>
-                            <a class="card-footer text-black clearfix small z-1" href="tableEmpleados.html">
-                                <span class="float-left">Ver Detalles</span>
-                                <span class="float-right"> <i class="fas fa-angle-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-sm-6 mb-3">
-                        <div class="card text-white bg-isasystem o-hidden h-100">
-                            <div class="card-body">
-                                <div class="card-body-icon">
-                                    <i class="fas fa-child icon-2x" aria-hidden="true"></i>
-                                </div>
-                                <div class="mr-5">Aspirantes</div>
-                            </div>
-                            <a class="card-footer text-black clearfix small z-1" href="tableAspirante.html">
-                                <span class="float-left">Ver Detalles</span>
-                                <span class="float-right"><i class="fas fa-angle-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Fundacion table-change fundacion -->
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-lg-10 justify-content-center" >
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3 d-flex flex-row align-items-center">
-                                <div class="container-fluid">
-
-
-                                    <!-- DataTales Example -->
-                                    <div class="row justify-content-center">
-                                        <div class="card shadow ">
-                                            <div class="card-header py-3">
-                                                <h2 class="m-0 font-weight-bold text-success">Proyectos:</h2>
-                                            </div>
-                                            <div class="card-body justify-content-center">
-                                                <div class="table-responsive">
-                                                    <table class="table table-bordered" id="dataTable" width="100%"  cellspacing="0">
-                                                        <thead class="thead-light">
-                                                        <tr>
-                                                            <th scope="col">Codigo</th>
-                                                            <th scope="col">Nombre</th>
-                                                            <th scope="col">Descripcion</th>
-                                                            <th scope="col">Status</th>
-                                                            <th scope="col">Usuarios</th>
-                                                            <th scope="col">Progreso</th>
-                                                            <th scope="col">Fecha de entrega</th>
-                                                            <th></th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <span class="text-sm">
-                                                                    1
-                                                                </span>
-                                                            </td>
-                                                            <th scope="row">
-                                                                <div class="media align-items-center">
-                                                                    <!--<a href="#" class="avatar rounded-circle mr-3">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/bootstrap.jpg">
-                                                                    </a>-->
-                                                                    <div class="media-body">
-                                                                        <span class="mb-0 text-sm">Sui market</span>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                            <td class="text-sm">Plataforma de venta de comida online</td>
-                                                            <td>
-                                                                <span class="badge badge-dot  text-sm">
-                                                                    <i class="bg-warning"></i> pendiente
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="avatar-group">
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="mr-2 text-sm">60%</span>
-                                                                    <div>
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>20/12/2019</td>
-                                                            <td>
-                                                                <a href="Proyecto.html">
-                                                                    ver detalle
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <span class="text-sm">
-                                                                    2
-                                                                </span>
-                                                            </td>
-                                                            <th scope="row">
-                                                                <div class="media align-items-center">
-                                                                    <!--<a href="#" class="avatar rounded-circle mr-3">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/bootstrap.jpg">
-                                                                    </a>-->
-                                                                    <div class="media-body">
-                                                                        <span class="mb-0 text-sm">Sui market 2</span>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                            <td class="text-sm">Plataforma de venta de comida online</td>
-                                                            <td>
-                                                                <span class="badge badge-dot  text-sm">
-                                                                    <i class="bg-success"></i> completed
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="avatar-group">
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="mr-2 text-sm">100%</span>
-                                                                    <div>
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>20/12/2019</td>
-                                                            <td>
-                                                                <a href="#">
-                                                                    ver detalle
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <span class="text-sm">
-                                                                    3
-                                                                </span>
-                                                            </td>
-                                                            <th scope="row">
-                                                                <div class="media align-items-center">
-                                                                    <!--<a href="#" class="avatar rounded-circle mr-3">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/bootstrap.jpg">
-                                                                    </a>-->
-                                                                    <div class="media-body">
-                                                                        <span class="mb-0 text-sm">Sui market 3</span>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                            <td class="text-sm">Plataforma de venta de comida online</td>
-                                                            <td>
-                                                                <span class="badge badge-dot  text-sm">
-                                                                    <i class="bg-info"></i> pendiente
-                                                                </span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="avatar-group">
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-                                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="mr-2 text-sm">90%</span>
-                                                                    <div>
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>20/12/2019</td>
-                                                            <td>
-                                                                <a href="#">
-                                                                    ver detalle
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--formulario presupuesto-->
-                                    <!--end formulario presupuesto-->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fundacion change-->
-                    <!-- end Fundacion change-->
-                </div>
-                <!-- end Fundacion table-change fundacion -->
-
-
+        <!-- band -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Band</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/band.html"><img src="images/band.png" alt="Band template screenshot"></a>
+              </figure>
             </div>
-
+            <footer class="card-footer">
+              <a href="templates/band.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/band.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
         </div>
-
-
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span> &copy; Sistemas II UCLA-DCYT</span>
-                </div>
+        <!-- blog -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Blog</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/blog.html"><img src="images/blog.png" alt="Blog template screenshot"></a>
+              </figure>
             </div>
-        </footer>
-        <!-- End of Footer -->
-
+            <footer class="card-footer">
+              <a href="templates/blog.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/blog.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- cards -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Cards</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/cards.html"><img src="images/cards.png" alt="Cards template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/cards.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/cards.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- cheatsheet -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Cheatsheet</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/cheatsheet.html"><img src="images/cheatsheet.png" alt="Cheatsheet template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/cheatsheet.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/cheatsheet.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- cover -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Cover</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/cover.html"><img src="images/cover.png" alt="Cover template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/cover.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/cover.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- forum -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Forum</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/forum.html"><img src="images/forum.png" alt="Hero template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/forum.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/forum.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- hero -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Hero</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/hero.html"><img src="images/hero.png" alt="Hero template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/hero.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!--inbox -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Inbox</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/inbox.html"><img src="images/inbox.png" alt="Inbox template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/inbox.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/inbox.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- insta album -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Image Timeline</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/instaAlbum.html"><img src="images/instaalbum.png" alt="Landing template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/instaAlbum.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/instaAlbum.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!--kanban -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Kanban</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/kanban.html"><img src="images/kanban.png" alt="Kanban template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/kanban.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/kanban.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Kanban.js</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/kanban[search].html"><img src="images/kanban2.png" alt="Kanban template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/kanban[search].html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/kanban[search].html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- landing -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Landing</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/landing.html"><img src="images/landing.png" alt="Landing template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/landing.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- login -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Login</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/login.html"><img src="images/login.png" alt="Login template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/login.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/login.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- modal cards -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Modal Cards</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/modal-cards.html"><img src="images/modalcards.png" alt="modal-cards template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/modal-cards.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/modal-cards.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- Personal/Portfolio template -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Portfolio</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/personal.html"><img src="images/personal.png" alt="personal portfolio template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/personal.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/personal.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- Personal/Portfolio template -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Showcase</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/showcase.html"><img src="images/showcase.png" alt="showcase portfolio template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/showcase.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/showcase.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- tabs -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Tabs</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/tabs.html"><img src="images/tabs.png" alt="tabs template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/tabs.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/tabs.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- Contact Page -->
+        <div class="column is-4-desktop is-3-widescreen is-half-tablet">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>Contact Page</span>
+                <span class="is-pulled-right">
+                  <a href="https://github.com/jgthms/bulma/releases/tag/0.8.0">
+                    <span class="tag is-default is-primary" title="Current Version">v0.8.0</span>
+                  </a>
+                  <span class="tag is-default is-info"><i class="fas fa-desktop" title="Desktop Support"></i></span>
+                  <span class="tag is-default is-info"><i class="fas fa-mobile-alt" title="Mobile Support"></i></span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <a href="templates/contact.html"><img src="images/contact.png" alt="tabs template screenshot"></a>
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a href="templates/contact.html" class="card-footer-item"><i class="fas fa-search"></i>Preview</a>
+              <a href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/contact.html" class="card-footer-item"><i class="fas fa-code"></i>Source Code</a>
+            </footer>
+          </div>
+        </div>
+        <!-- coming soon -->
+        <div class="column">
+          <center>
+            <div class="box">
+              <p class="has-text-centered">More templates are waiting for you to make them! So, give it a go.</p>
+            </div>
+          </center>
+        </div>
+      </div>
     </div>
-    <!-- End of Content Wrapper -->
-
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Desea Salir?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Seleccione "Salir" para cerrar sessión.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-success" href="#">Salir</a>
-            </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma Templates</strong> by <a href="https://github.com/dansup">Daniel Supernault</a> and <a href="https://github.com/BulmaTemplates/bulma-templates/graphs/contributors">many</a> contributors. The Source Code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/BulmaTemplates/bulma-templates">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+          </p>
         </div>
-    </div>
-</div>
-
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins-->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts-->
-<script src="js/demo/datatables-demo.js"></script>
-
-<!--   Core   -->
-<script src="assets/js/plugins/jquery/dist/jquery.min.js"></script>
-<script src="assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!--   Optional JS   -->
-<!--   Argon JS   -->
-<script src="assets/js/argon-dashboard.min.js?v=1.1.0"></script>
-<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-<script>
-    window.TrackJS &&
-    TrackJS.install({
-        token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "argon-dashboard-free"
-    });
-</script>
-
-</body>
-
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 </html>

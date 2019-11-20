@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Proyecto Laboratorio I</title>
+
+    <!--KANBAN-->
+    <link rel="stylesheet" href="../../dist/jkanban.min.css" />
+    <link  href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <!-- Favicon
+<link href="assets/img/brand/favicon.png" rel="icon" type="image/png">-->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+    <link href="assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">-->
+
+    <style>
+        .card.draggable {
+            margin-bottom: 1rem;
+            cursor: grab;
+        }
+
+        .droppable {
+            background-color: var(--success);
+            min-height: 120px;
+            margin-bottom: 1rem;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-isasystems sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon ">
+                <i class="fas fa-city"></i>
+                <!--<i class="fas fa-laugh-wink"></i>-->
+            </div>
+            <div class="sidebar-brand-text mx-3">Isa system</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading
+        <div class="sidebar-heading">
+            tablas
+        </div>-->
+
+        <!-- Nav Item - tables Collapse Listas
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+               aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Listados</span>
+            </a>
+            <div id="collapsePages" class="collapse " aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Solicitudes:</h6>
+                    <a class="collapse-item" href="tableRequest.html">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Solicitudes</span>
+                    </a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Servicios:</h6>
+                    <a class="collapse-item " href="tableService.html">
+                        <i class="fas fa-syringe"></i>
+                        <span>Servicios</span>
+                    </a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Beneficiarios:</h6>
+                    <a class="collapse-item" href="tableBeneficiario.html">
+                        <i class="fas fa-users"></i>
+                        <span>Beneficiarios</span>
+                    </a>
+                </div>
+            </div>
+        </li>-->
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            registrar
+        </div>
+
+        <!-- Nav Item - forms Collapse Formularios -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseList"
+               aria-expanded="true" aria-controls="collapseList">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Formularios</span>
+            </a>
+            <div id="collapseList" class="collapse show" aria-labelledby="headingList" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Empleado:</h6>
+                    <a class="collapse-item" href="formEmployee.html">
+                        <i class="fas fa-file-signature"></i>
+                        <span>Registrar Empleado</span>
+                    </a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Aspirante:</h6>
+                    <a class="collapse-item" href="formAspirante.html">
+                        <i class="fas fa-file-signature"></i>
+                        <span>Registrar Aspirante</span>
+                    </a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Proyecto:</h6>
+                    <a class="collapse-item" href="formProyecto.html">
+                        <i class="fas fa-file-signature"></i>
+                        <span>Registrar Proyecto</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Comprimir Sidebar-->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for..." aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
+                            <!--<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">-->
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+                            <!--<div class="dropdown-divider"></div>-->
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid pt-3">
+                <div class="row flex-row flex-sm-nowrap py-3">
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <span class="float-right" style="opacity:0">|</span>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <h6 class="card-title text-uppercase text-truncate py-2">Interfaz de usuario</h6>
+                                <div class="items border border-light">
+                                    <div class="card draggable shadow-sm" id="cd1" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <a href="#" class="avatar avatar-sm float-right" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                    <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
+                                                </a>
+                                                <!--<img src="//placehold.it/30" class="rounded-circle float-right">-->
+                                                <a href="" class="lead font-weight-light">Tarea 1</a>
+                                            </div>
+                                            <p>
+                                                Descpcion 1.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                    <div class="card draggable shadow-sm" id="cd2" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <a href="#" class="avatar avatar-sm float-right" data-toggle="tooltip" data-original-title="Romina Hadid">
+                                                    <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+                                                </a>
+                                                <a href="" class="lead font-weight-light">Tarea 2</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 2.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                    <div class="card draggable shadow-sm" id="cd3" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <a href="#" class="avatar avatar-sm float-right" data-toggle="tooltip" data-original-title="Alexander Smith">
+                                                    <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
+                                                </a>
+                                                <a href="" class="lead font-weight-light">Tarea 3</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 3.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <span class="float-right" style="opacity:0">|</span>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <h6 class="card-title text-uppercase text-truncate py-2">En progreso</h6>
+                                <div class="items border border-light">
+                                    <div class="card draggable shadow-sm" id="cd4" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <div class="avatar-group float-right">
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="lead font-weight-light">Tarea 4</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 4.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                    <div class="card draggable shadow-sm" id="cd5" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <div class="avatar-group float-right">
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="lead font-weight-light">Tarea 5</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 5.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <span class="float-right" style="opacity:0">|</span>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <h6 class="card-title text-uppercase text-truncate py-2">Revision</h6>
+                                <div class="items border border-light">
+                                    <div class="card draggable shadow-sm" id="cd9" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <div class="avatar-group float-right">
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="lead font-weight-light">Tarea 6</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 6.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#" class="float-right " data-original-title="Ver detalle" data-toggle="tooltip"><i class="fa fa-info-circle e text-success" ></i></a>
+                                <span class="float-right" style="opacity:0">|</span>
+                                <a href="#" class="float-right " data-original-title="Agregar Tarea" data-toggle="tooltip"><i class="fa fa-plus-circle text-success" ></i></a>
+                                <h6 class="card-title text-uppercase text-truncate py-2">Completo</h6>
+                                <div class="items border border-light">
+                                    <div class="card draggable shadow-sm" id="cd11" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <div class="avatar-group float-right">
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="lead font-weight-light">Tarea 7</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 7.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                    <div class="card draggable shadow-sm" id="cd12" draggable="true" ondragstart="drag(event)">
+                                        <div class="card-body p-2">
+                                            <div class="card-title">
+                                                <div class="avatar-group float-right">
+                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
+                                                        <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                                                    </a>
+                                                </div>
+                                                <a href="" class="lead font-weight-light">Tarea 8</a>
+                                            </div>
+                                            <p>
+                                                Descripcion 8.
+                                            </p>
+                                            <button class="btn btn-success btn-sm">Ver</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="table-responsive">
+                    <div id="myKanban" class="card-body">
+                    </div>
+                    <button id="addDefault" class="btn btn-info ">Add "Default" board</button>
+                    <hr style="opacity:0"/>
+                    <button id="addToDo" class="btn btn-info ">Add element in "To Do" Board</button>
+                    <hr style="opacity:0"/>
+                    <button id="removeBoard" class="btn btn-info ">Remove "Done" Board</button>
+                    <hr style="opacity:0"/>
+                    <button id="removeElement" class="btn btn-info  ">Remove "My Task Test"</button>
+                TODO:  AGREGAR CONTENIDO DE PROYECTOS
+            </div>-->
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Laboratorio I UCLA DCYT</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Desea Salir?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Seleccione "Salir" para cerrar sessión.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-success" href="#">Salir</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../dist/jkanban.js"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins-->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts-->
+<script src="js/demo/datatables-demo.js"></script>
+<!--   Core   -->
+<script src="assets/js/plugins/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!--   Optional JS   -->
+<!--   Argon JS   -->
+<script src="assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+<script>
+    window.TrackJS &&
+    TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+    });
+</script>
+
+<script>
+    var KanbanTest = new jKanban({
+        element: "#myKanban",
+        gutter: "10px",
+        widthBoard: "450px",
+        itemHandleOptions:{
+            enabled: true,
+        },
+        click: function(el) {
+            console.log("Trigger on all items click!");
+        },
+        dropEl: function(el, target, source, sibling){
+            console.log(target.parentElement.getAttribute('data-id'));
+            console.log(el, target, source, sibling)
+        },
+        buttonClick: function(el, boardId) {
+            console.log(el);
+            console.log(boardId);
+            // create a form to enter element
+            var formItem = document.createElement("form");
+            formItem.setAttribute("class", "itemform");
+            formItem.innerHTML =
+                '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>';
+            KanbanTest.addForm(boardId, formItem);
+            formItem.addEventListener("submit", function(e) {
+                e.preventDefault();
+                var text = e.target[0].value;
+                KanbanTest.addElement(boardId, {
+                    title: text
+                });
+                formItem.parentNode.removeChild(formItem);
+            });
+            document.getElementById("CancelBtn").onclick = function() {
+                formItem.parentNode.removeChild(formItem);
+            };
+        },
+        addItemButton: true,
+        boards: [
+            {
+                id: "_todo",
+                title: "To Do (Can drop item only in working)",
+                class: "info,good",
+                dragTo: ["_working"],
+                item: [
+                    {
+                        id: "_test_delete",
+                        title: "Try drag this (Look the console)",
+                        drag: function(el, source) {
+                            console.log("START DRAG: " + el.dataset.eid);
+                        },
+                        dragend: function(el) {
+                            console.log("END DRAG: " + el.dataset.eid);
+                        },
+                        drop: function(el) {
+                            console.log("DROPPED: " + el.dataset.eid);
+                        }
+                    },
+                    {
+                        title: "Try Click This!",
+                        click: function(el) {
+                            alert("click");
+                        },
+                        class: ["peppe", "bello"]
+                    }
+                ]
+            },
+            {
+                id: "_working",
+                title: "Working (Try drag me too)",
+                class: "warning",
+                item: [
+                    {
+                        title: "Do Something!"
+                    },
+                    {
+                        title: "Run?"
+                    }
+                ]
+            },
+            {
+                id: "_done",
+                title: "Done (Can drop item only in working)",
+                class: "success",
+                dragTo: ["_working"],
+                item: [
+                    {
+                        title: "All right"
+                    },
+                    {
+                        title: "Ok!"
+                    }
+                ]
+            }
+        ]
+    });
+    var toDoButton = document.getElementById("addToDo");
+    toDoButton.addEventListener("click", function() {
+        KanbanTest.addElement("_todo", {
+            title: "Test Add"
+        });
+    });
+    var addBoardDefault = document.getElementById("addDefault");
+    addBoardDefault.addEventListener("click", function() {
+        KanbanTest.addBoards([
+            {
+                id: "_default",
+                title: "Kanban Default",
+                item: [
+                    {
+                        title: "Default Item"
+                    },
+                    {
+                        title: "Default Item 2"
+                    },
+                    {
+                        title: "Default Item 3"
+                    }
+                ]
+            }
+        ]);
+    });
+    var removeBoard = document.getElementById("removeBoard");
+    removeBoard.addEventListener("click", function() {
+        KanbanTest.removeBoard("_done");
+    });
+    var removeElement = document.getElementById("removeElement");
+    removeElement.addEventListener("click", function() {
+        KanbanTest.removeElement("_test_delete");
+    });
+    var allEle = KanbanTest.getBoardElements("_todo");
+    allEle.forEach(function(item, index) {
+        //console.log(item);
+    });
+</script>
+
+<script>
+    const drag = (event) => {
+        event.dataTransfer.setData("text/plain", event.target.id);
+    }
+
+    const allowDrop = (ev) => {
+        ev.preventDefault();
+        if (hasClass(ev.target,"dropzone")) {
+            addClass(ev.target,"droppable");
+        }
+    }
+
+    const clearDrop = (ev) => {
+        removeClass(ev.target,"droppable");
+    }
+
+    const drop = (event) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text/plain");
+        const element = document.querySelector(`#${data}`);
+        try {
+            // remove the spacer content from dropzone
+            event.target.removeChild(event.target.firstChild);
+            // add the draggable content
+            event.target.appendChild(element);
+            // remove the dropzone parent
+            unwrap(event.target);
+        } catch (error) {
+            console.warn("can't move the item to the same place")
+        }
+        updateDropzones();
+    }
+
+    const updateDropzones = () => {
+        /* after dropping, refresh the drop target areas
+          so there is a dropzone after each item
+          using jQuery here for simplicity */
+
+        var dz = $('<div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>');
+
+        // delete old dropzones
+        $('.dropzone').remove();
+
+        // insert new dropdzone after each item
+        dz.insertAfter('.card.draggable');
+
+        // insert new dropzone in any empty swimlanes
+        $(".items:not(:has(.card.draggable))").append(dz);
+    };
+
+    // helpers
+    function hasClass(target, className) {
+        return new RegExp('(\\s|^)' + className + '(\\s|$)').test(target.className);
+    }
+
+    function addClass(ele,cls) {
+        if (!hasClass(ele,cls)) ele.className += " "+cls;
+    }
+
+    function removeClass(ele,cls) {
+        if (hasClass(ele,cls)) {
+            var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+            ele.className=ele.className.replace(reg,' ');
+        }
+    }
+
+    function unwrap(node) {
+        node.replaceWith(...node.childNodes);
+    }
+</script>
+
+</body>
+
+</html>
