@@ -272,7 +272,7 @@
                                                     <div class="input-group-append">
                                                         <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
                                                     </div>
-                                                    <input type="number" step="any" class="form-control" id="telefono" placeholder="Telefono" required>
+                                                    <input type="number" step="any" class="form-control" id="telefono" placeholder="Telefono" >
                                                 </div>
                                             </div>
                                         </div>
@@ -295,12 +295,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="mensaje" class="alert  alert-success text-center" hidden>
-                                            Error Message
+                                        <div id="mensaje" class="alert  alert-success text-center" style="display: none;">
+                                            Registro exitoso
                                         </div>
                                         <hr style="opacity:0"/>
                                         <hr style="opacity:0"/>
-                                        <button type="submit" class="btn btn-info btn-block">
+                                        <button id="mostrar" type="submit" class="btn btn-info btn-block" onclick="mensaje()">
                                             Registrar
                                         </button>
                                     </form>
@@ -341,7 +341,12 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+<script>
+    function  mensaje(){
+    $("#mensaje").show();
 
+    }
+</script>
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">

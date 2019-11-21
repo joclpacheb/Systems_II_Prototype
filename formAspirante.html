@@ -308,12 +308,12 @@
                                             </div>
                                         </div>
 
-                                        <div id="mensaje" class="alert  alert-success text-center" hidden>
-                                            Error Message
+                                        <div id="mensaje" class="alert  alert-success text-center" style="display: none;">
+                                            Registro exitoso
                                         </div>
                                         <hr style="opacity:0"/>
                                         <hr style="opacity:0"/>
-                                        <button type="submit" class="btn btn-info btn-block">
+                                        <button type="submit" class="btn btn-info btn-block" onclick="mensaje()">
                                             Registrar
                                         </button>
                                     </form>
@@ -350,11 +350,18 @@
 </div>
 <!-- End of Page Wrapper -->
 
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
 
+<script>
+    function  mensaje(){
+        $("#mensaje").show();
+
+    }
+</script>
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
