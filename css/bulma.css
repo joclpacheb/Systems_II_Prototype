@@ -2088,8 +2088,10 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 }
 
 .button.is-primary {
-  background-color: #00d1b2;
+  /*background-color: #00d1b2;*/
+  background-color: #00AA53;
   border-color: transparent;
+
   color: #fff;
 }
 
@@ -10015,7 +10017,8 @@ label.panel-block:hover {
 }
 
 .hero.is-white.is-bold {
-  background-image: linear-gradient(141deg, #e6e6e6 0%, white 71%, white 100%);
+   background-image: linear-gradient(141deg, #e6e6e6 0%, white 71%, white 100%);
+
 }
 
 @media screen and (max-width: 768px) {
@@ -10327,7 +10330,8 @@ label.panel-block:hover {
 }
 
 .hero.is-primary.is-bold {
-  background-image: linear-gradient(141deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%);
+  /*background-image: linear-gradient(141deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%);*/
+  background-color: #00AA53;
 }
 
 @media screen and (max-width: 768px) {
