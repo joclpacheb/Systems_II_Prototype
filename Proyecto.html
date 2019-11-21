@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
 
@@ -275,7 +275,7 @@
                                             <p>
                                                 Descripción 1.
                                             </p>
-                                            <button class="btn btn-success btn-sm">Ver</button>
+                                            <button class="btn btn-success btn-sm" onclick="myFunction3()">Ver</button>
                                         </div>
                                     </div>
                                     <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>
@@ -421,7 +421,7 @@
                                         <div class="card-body p-2">
                                             <div class="card-title">
                                                 <div class="avatar-group float-right">
-                                                    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                       <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
                                                         <img alt="Image placeholder" src="assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
                                                     </a>
                                                     <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
@@ -699,7 +699,9 @@
                 </button>
             </div>
             <div class="modal-body">
+                          <fieldset disabled>
                 <form id="servicio" autocomplete="off" class="form" method="post" role="form">
+
                     <input class="form-control" type=hidden >
                     <div class="form-group row">
                         <label for="nombre"
@@ -709,7 +711,7 @@
                                 <div class="input-group-append">
                                     <span class="input-group-text"><b>N</b></span>
                                 </div>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre"  required>
+                                <input type="text" class="form-control" id="nombre" placeholder="Interfaz de Usuario"  required>
                             </div>
                         </div>
 
@@ -718,7 +720,7 @@
                         <label for="example-date-input" class="col-sm-3 control-label"><b>Fecha:<sup>*</sup></b></label>
                         <div class="col-sm-9 mb-3 mb-sm-0">
                             <div class="form-group input-group">
-                                <div class="input-group-append">
+                                  <div class="input-group-append">
                                                         <span class="input-group-text"><i
                                                                 class="fas fa-calendar"></i></span>
                                 </div>
@@ -730,7 +732,65 @@
                         <label for="descripcion" class="col-sm-3 control-label"><b>Descripción:<sup>*</sup></b></label>
                         <div class="col-sm-9 mb-3 mb-sm-0">
                             <div class="form-group input-group">
-                                <textarea id="descripcion" class="form-control" rows="3" placeholder="Descripción ..." style="margin-top: 0px; margin-bottom: 0px; height: 95px;"></textarea>
+                                <textarea id="descripcion" class="form-control" rows="3" placeholder="Creación de interfaces de usuario." style="margin-top: 0px; margin-bottom: 0px; height: 95px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success text-center" hidden>Error Message</div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Detalle Tarea modal-->
+<div class="modal fade" id="DetalleTarea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-black" id="DetalleTareaLabel">Detalle de la Tarea</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                          <fieldset disabled>
+                <form id="servicio" autocomplete="off" class="form" method="post" role="form">
+
+                    <input class="form-control" type=hidden >
+                    <div class="form-group row">
+                        <label for="nombre"
+                               class="col-sm-3 control-label"><b>Nombre:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><b>N</b></span>
+                                </div>
+                                <input type="text" class="form-control" id="nombre" placeholder="Cambiar colores de los sidebar"  required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-date-input" class="col-sm-3 control-label"><b>Fecha:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                  <div class="input-group-append">
+                                                        <span class="input-group-text"><i
+                                                                class="fas fa-calendar"></i></span>
+                                </div>
+                                <input class="form-control" type="date" id="example-date-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion" class="col-sm-3 control-label"><b>Descripción:<sup>*</sup></b></label>
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                            <div class="form-group input-group">
+                                <textarea id="descripcion" class="form-control" rows="3" placeholder="Sidebar necesitan cambiar a color verde" style="margin-top: 0px; margin-bottom: 0px; height: 95px;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -750,6 +810,9 @@
     }
      function myFunction2() {
         $('#DetalleModal').modal('show');
+    }
+     function myFunction3() {
+        $('#DetalleTarea').modal('show');
     }
 </script>
 
